@@ -16,10 +16,10 @@ class PaisesTableSeeder extends Seeder
     public function run()
     {
         Schema::disableForeignKeyConstraints();
-        DB::table('countries')->truncate();
+        DB::table('paises')->truncate();
         Schema::enableForeignKeyConstraints();
       
-        $countries = [
+        $paises = [
             ['nome' => 'Afeganistão', 'sigla' => 'AFG'],
             ['nome' => 'Albânia', 'sigla' => 'ALB'],
             ['nome' => 'Alemanha', 'sigla' => 'DEU'],
@@ -219,6 +219,6 @@ class PaisesTableSeeder extends Seeder
             ['nome' => 'Zimbábue', 'sigla' => 'ZWE']
         ];
   
-        DB::table('paises')->insert($countries);
+        DB::table('paises')->insert($paises);
     }
 } 
